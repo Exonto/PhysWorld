@@ -115,62 +115,106 @@ namespace PhysWorld.PhysLogic.Cartesian
 
 		public Vector Add(double x, double y)
 		{
-			return new Vector(this.X + x, this.Y + y);
+			this.X += x;
+			this.Y += y;
+
+			return this;
 		}
 
 		public Vector Add(double x, double y, double z)
 		{
-			return new Vector(this.X + x, this.Y + y, this.Z + z);
+			this.X += x;
+			this.Y += y;
+			this.Z += z;
+
+			return this;
 		}
 
 		public Vector Add(Vector p)
 		{
-			return new Vector(this.X + p.X, this.Y + p.Y, this.Z + p.Z);
+			this.X += p.X;
+			this.Y += p.Y;
+			this.Z += p.Z;
+
+			return this;
 		}
 
 		public Vector Subtract(double x, double y)
 		{
-			return new Vector(this.X - x, this.Y - y);
+			this.X -= x;
+			this.Y -= y;
+
+			return this;
 		}
 
 		public Vector Subtract(double x, double y, double z)
 		{
-			return new Vector(this.X - x, this.Y - y, this.Z - z);
+			this.X -= x;
+			this.Y -= y;
+			this.Z -= z;
+
+			return this;
 		}
 
 		public Vector Subtract(Vector p)
 		{
-			return new Vector(this.X - p.X, this.Y - p.Y, this.Z - p.Z);
+			this.X -= p.X;
+			this.Y -= p.Y;
+			this.Z -= p.Z;
+
+			return this;
 		}
 
 		public Vector Multiply(double x, double y)
 		{
-			return new Vector(this.X * x, this.Y * y);
+			this.X *= x;
+			this.Y *= y;
+
+			return this;
 		}
 
 		public Vector Multiply(double x, double y, double z)
 		{
-			return new Vector(this.X * x, this.Y * y, this.Z * z);
+			this.X *= x;
+			this.Y *= y;
+			this.Z *= z;
+
+			return this;
 		}
 
 		public Vector Multiply(Vector p)
 		{
-			return new Vector(this.X * p.X, this.Y * p.Y, this.Z * p.Z);
+			this.X *= p.X;
+			this.Y *= p.Y;
+			this.Z *= p.Z;
+
+			return this;
 		}
 
 		public Vector Divide(double x, double y)
 		{
-			return new Vector(this.X / x, this.Y / y);
+			this.X /= x;
+			this.Y /= y;
+
+			return this;
 		}
 
 		public Vector Divide(double x, double y, double z)
 		{
-			return new Vector(this.X / x, this.Y / y, this.Z / z);
+			this.X /= x;
+			this.Y /= y;
+			this.Z /= z;
+
+			return this;
 		}
 
 		public Vector Divide(Vector p)
 		{
-			return new Vector(this.X / p.X, this.Y / p.Y, this.Z / p.Z);
+			this.X /= p.X;
+			this.Y /= p.Y;
+			this.Z /= p.Z;
+
+			return this;
 		}
 
 		#endregion
