@@ -8,7 +8,7 @@ namespace PhysWorld.PhysLogic
 {
 	class PhysSim
 	{
-		public List<PhysWorld> PhysWorlds { get; }
+		public List<PhysicsWorld> PhysWorlds { get; }
 
 		public static void UpdateWorlds(long elapsed)
 		{

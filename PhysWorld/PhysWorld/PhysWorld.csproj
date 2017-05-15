@@ -47,11 +47,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logger.cs" />
+    <Compile Include="PhysLogic\Bounding\ConvexPolygon.cs" />
+    <Compile Include="PhysLogic\Bounding\Polygon.cs" />
     <Compile Include="PhysLogic\Cartesian\Point.cs" />
     <Compile Include="PhysLogic\Cartesian\Vector.cs" />
+    <Compile Include="PhysLogic\Cartesian\Vertex.cs" />
     <Compile Include="PhysLogic\Clock.cs" />
     <Compile Include="PhysLogic\PhysSim.cs" />
-    <Compile Include="PhysLogic\PhysWorld.cs" />
+    <Compile Include="PhysLogic\PhysicsWorld.cs" />
+    <Compile Include="PhysLogic\Rendering\PhysRender.cs" />
     <Compile Include="PhysWorldForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +89,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

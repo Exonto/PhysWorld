@@ -4,10 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PhysWorld.PhysLogic
+namespace PhysWorld.PhysLogic.Bounding
 {
-	class PhysWorld
+	class ConvexPolygon
 	{
+
+		#region Constructors
+
+
+
+		#endregion
 
 	}
 }

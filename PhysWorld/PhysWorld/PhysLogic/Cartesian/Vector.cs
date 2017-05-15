@@ -9,7 +9,7 @@ namespace PhysWorld.PhysLogic.Cartesian
 	/// <summary>
 	/// This defines a 3D mathematical vector.
 	/// </summary>
-	class Vector
+	public class Vector
 	{
 		public double X { get; set; }
 		public double Y { get; set; }
@@ -130,11 +130,11 @@ namespace PhysWorld.PhysLogic.Cartesian
 			return this;
 		}
 
-		public Vector Add(Vector p)
+		public Vector Add(Vector v)
 		{
-			this.X += p.X;
-			this.Y += p.Y;
-			this.Z += p.Z;
+			this.X += v.X;
+			this.Y += v.Y;
+			this.Z += v.Z;
 
 			return this;
 		}
@@ -156,11 +156,11 @@ namespace PhysWorld.PhysLogic.Cartesian
 			return this;
 		}
 
-		public Vector Subtract(Vector p)
+		public Vector Subtract(Vector v)
 		{
-			this.X -= p.X;
-			this.Y -= p.Y;
-			this.Z -= p.Z;
+			this.X -= v.X;
+			this.Y -= v.Y;
+			this.Z -= v.Z;
 
 			return this;
 		}
@@ -182,11 +182,11 @@ namespace PhysWorld.PhysLogic.Cartesian
 			return this;
 		}
 
-		public Vector Multiply(Vector p)
+		public Vector Multiply(Vector v)
 		{
-			this.X *= p.X;
-			this.Y *= p.Y;
-			this.Z *= p.Z;
+			this.X *= v.X;
+			this.Y *= v.Y;
+			this.Z *= v.Z;
 
 			return this;
 		}
@@ -208,11 +208,11 @@ namespace PhysWorld.PhysLogic.Cartesian
 			return this;
 		}
 
-		public Vector Divide(Vector p)
+		public Vector Divide(Vector v)
 		{
-			this.X /= p.X;
-			this.Y /= p.Y;
-			this.Z /= p.Z;
+			this.X /= v.X;
+			this.Y /= v.Y;
+			this.Z /= v.Z;
 
 			return this;
 		}
@@ -233,6 +233,36 @@ namespace PhysWorld.PhysLogic.Cartesian
 							  this.Z / this.Magnitude);
 		}
 
+		public double DistanceTo(double x, double y)
+		{
+			double xDif = Math.Abs(this.X - x);
+			double yDif = Math.Abs(this.Y - y);
+
+			return Math.Sqrt(Math.Pow(xDif, 2) + Math.Pow(yDif, 2));
+		}
+
+		public double DistanceTo(double x, double y, double z)
+		{
+			double xDif = Math.Abs(this.X - x);
+			double yDif = Math.Abs(this.Y - y);
+			double zDif = Math.Abs(this.Z - z);
+
+			return Math.Sqrt(Math.Pow(xDif, 2) + 
+							 Math.Pow(yDif, 2) + 
+							 Math.Pow(zDif, 2));
+		}
+
+		public double DistanceTo(Vector v)
+		{
+			double xDif = Math.Abs(this.X - v.X);
+			double yDif = Math.Abs(this.Y - v.Y);
+			double zDif = Math.Abs(this.Z - v.Z);
+
+			return Math.Sqrt(Math.Pow(xDif, 2) +
+							 Math.Pow(yDif, 2) +
+							 Math.Pow(zDif, 2));
+		}
+
 		public double DotProduct(double x, double y)
 		{
 			return (this.X * x) + (this.Y * y);
@@ -243,9 +273,9 @@ namespace PhysWorld.PhysLogic.Cartesian
 			return (this.X * x) + (this.Y * y) + (this.Z * z);
 		}
 
-		public double DotProduct(Vector p)
+		public double DotProduct(Vector v)
 		{
-			return (this.X * p.X) + (this.Y * p.Y);
+			return (this.X * v.X) + (this.Y * v.Y);
 		}
 
 		public Vector CrossProduct(double x, double y)
@@ -260,11 +290,11 @@ namespace PhysWorld.PhysLogic.Cartesian
 							  (this.X * y) - (this.Y * x));
 		}
 
-		public Vector CrossProduct(Vector p)
+		public Vector CrossProduct(Vector v)
 		{
-			return new Vector((this.Y * p.Z) - (this.Z * p.Y),
-							  (this.Z * p.X) - (this.X * p.Z),
-							  (this.X * p.Y) - (this.Y * p.X));
+			return new Vector((this.Y * v.Z) - (this.Z * v.Y),
+							  (this.Z * v.X) - (this.X * v.Z),
+							  (this.X * v.Y) - (this.Y * v.X));
 		}
 
 		#endregion
