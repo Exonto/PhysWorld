@@ -49,7 +49,6 @@
     <Compile Include="Logger.cs" />
     <Compile Include="PhysLogic\Bounding\ConvexPolygon.cs" />
     <Compile Include="PhysLogic\Bounding\Polygon.cs" />
-    <Compile Include="PhysLogic\Cartesian\Point.cs" />
     <Compile Include="PhysLogic\Cartesian\Vector.cs" />
     <Compile Include="PhysLogic\Cartesian\Vertex.cs" />
     <Compile Include="PhysLogic\Clock.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhysWorld.PhysLogic.Bounding
 {
-	class ConvexPolygon
+	class ConvexPolygon : Polygon
 	{
 
 		#region Constructors
@@ -15,5 +15,6 @@ namespace PhysWorld.PhysLogic.Bounding
 
 		#endregion
 
+		
 	}
 }

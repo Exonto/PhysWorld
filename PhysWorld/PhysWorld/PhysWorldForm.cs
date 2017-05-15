@@ -28,7 +28,7 @@ namespace PhysWorld
 			System.Drawing.Graphics graphics = this.CreateGraphics();
 
 			this.World.Render.RenderPolygons(graphics);
-			this.World.Render.RenderVertices(graphics);
+			//this.World.Render.RenderVertices(graphics);
 
 			graphics.Dispose();
 		}
