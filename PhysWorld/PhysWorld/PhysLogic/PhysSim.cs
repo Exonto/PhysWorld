@@ -12,7 +12,7 @@ namespace PhysWorld.PhysLogic
 
 		public static void UpdateWorlds(long elapsed)
 		{
-			Logger.Log(elapsed);
+
 		}
 	}
 }
